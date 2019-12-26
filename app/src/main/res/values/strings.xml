@@ -1,0 +1,44 @@
+<resources>
+    <string name="app_name">T05p02_IVAN</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">T05p02_IVAN</string>
+    <string name="nav_header_subtitle">Mantenimiento de Alumnos</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="salirDialog_msg">¿Desea salir?</string>
+    <string name="bt_OK">Aceptar</string>
+    <string name="bt_KO">Cancelar</string>
+
+    <string name="menu_alta_alumno">Alta Alumno</string>
+    <string name="menu_baja_alumno">Baja Alumno</string>
+    <string name="menu_listado_alumnos">Listado de Alumnos</string>
+
+    <string name="tv_Dni">DNI:</string>
+    <string name="tv_Nombre">Nombre:</string>
+    <string name="tv_FechaNac">Fecha Nac:</string>
+    <string name="tv_FechaNacLabel">Fec.Nac:</string>
+    <string name="tv_Ciclo">Ciclo:</string>
+    <string name="tv_SinAlumnos">Sin Alumnos</string>
+
+    <string name="msg_AltaAlumnoOK">Alta de Alumno correcta.</string>
+    <string name="msg_AltaAlumnoKO">Alta de Alumno incorrecta!!</string>
+    <string name="msg_BajaAlumnoOK">Baja de Alumno correcta.</string>
+    <string name="msg_BajaAlumnoKO">Baja de Alumno incorrecta!!</string>
+    <string name="msg_EditarAlumnoOK">Edición de Alumno correcta.</string>
+    <string name="msg_EditarAlumnoKO">Edición de Alumno incorrecta!!</string>
+    <string name="msg_FaltanDatosObligatorios">Faltan Datos Obligatorios!!</string>
+    <string name="msg_NingunAlumnoSeleccionado">Error. Ningún alumno seleccionado!!</string>
+    <string name="msg_BorrarConfirmacion">¿Está seguro de que desea borrar?</string>
+
+    <string name="bottom_nav_editar">Editar</string>
+    <string name="bottom_nav_eliminar">Eliminar</string>
+    <string name="bottom_nav_foto">Foto</string>
+
+    <string-array name="ciclos_array">
+        <item/>
+        <item>CFGM SMR</item>
+        <item>CFGS DAM</item>
+    </string-array>
+</resources>

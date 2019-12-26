@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/nav_listado_alumnos">
+
+    <fragment
+        android:id="@+id/nav_listado_alumnos"
+        android:name="com.dam.t05p02_ivan.vista.ui.baja.BajaAlumnoFragment"
+        android:label="@string/menu_listado_alumnos"
+        tools:layout="@layout/fragment_baja_alumno" />
+
+    <fragment
+        android:id="@+id/nav_alta_alumno"
+        android:name="com.dam.t05p02_ivan.vista.ui.alta.AltaAlumnoFragment"
+        android:label="@string/menu_alta_alumno"
+        tools:layout="@layout/fragment_alta_alumno" />
+
+    <fragment
+        android:id="@+id/nav_baja_alumno"
+        android:name="com.dam.t05p02_ivan.vista.ui.listado.ListadoAlumnosFragment"
+        android:label="@string/menu_baja_alumno"
+        tools:layout="@layout/fragment_listado_alumnos" />
+
+</navigation>
