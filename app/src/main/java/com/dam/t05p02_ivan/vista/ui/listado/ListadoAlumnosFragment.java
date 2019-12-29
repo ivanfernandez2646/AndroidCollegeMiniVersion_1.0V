@@ -1,15 +1,12 @@
 package com.dam.t05p02_ivan.vista.ui.listado;
 
 import android.content.Context;
-import android.content.Intent;
 import android.os.Bundle;
-import android.provider.MediaStore;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.annotation.NonNull;
@@ -21,7 +18,6 @@ import com.dam.t05p02_ivan.R;
 import com.dam.t05p02_ivan.vista.adaptadores.AdaptadorAlumnos;
 import com.dam.t05p02_ivan.vistamodelo.Datos;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
-import com.google.android.material.navigation.NavigationView;
 
 public class ListadoAlumnosFragment extends Fragment {
 
@@ -98,7 +94,7 @@ public class ListadoAlumnosFragment extends Fragment {
             rvAlumnos.setAdapter(mAdapter);
             bottomNavigationView.setOnNavigationItemSelectedListener(navigationView_OnSelectedItem);
 
-            comprobarCantidadAlumnos();
+            mostrarTvSinAlumnos(false);
         }
     }
 
@@ -131,10 +127,12 @@ public class ListadoAlumnosFragment extends Fragment {
         }
     };
 
-    private void comprobarCantidadAlumnos(){
+    private void mostrarTvSinAlumnos(boolean alumnoEliminado){
         if(Datos.getInstance().getmAlumnos().size() > 0){
             tvSinAlumnos.setVisibility(View.INVISIBLE);
-            mAdapter.notifyDataSetChanged();
+            if(!alumnoEliminado){
+                mAdapter.notifyDataSetChanged();
+            }
         }else{
             tvSinAlumnos.setVisibility(View.VISIBLE);
         }
@@ -142,6 +140,6 @@ public class ListadoAlumnosFragment extends Fragment {
 
     public void actualizarRVEliminar(int posicionAlumno){
         mAdapter.notifyItemRemoved(posicionAlumno);
-        comprobarCantidadAlumnos();
+        mostrarTvSinAlumnos(true);
     }
 }

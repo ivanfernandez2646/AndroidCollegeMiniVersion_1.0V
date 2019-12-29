@@ -92,7 +92,12 @@ public class AdaptadorAlumnos extends RecyclerView.Adapter<AdaptadorAlumnos.VHAl
 
         @Override
         public void onClick(View v) {
-            mItemPos = getLayoutPosition();
+            int pos = getLayoutPosition();
+            if(mItemPos == pos){
+                mItemPos = -1;
+            }else{
+                mItemPos = pos;
+            }
             notifyDataSetChanged();
         }
     }

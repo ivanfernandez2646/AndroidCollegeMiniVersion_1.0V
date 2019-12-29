@@ -300,14 +300,13 @@ public class MainActivity extends AppCompatActivity implements ConfirmDialog.Exi
         super.onActivityResult(requestCode, resultCode, data);
         switch (requestCode) {
             case ListadoAlumnosFragment.CAMERA_REQUEST:
-                if (data.getExtras() != null) {
+                if (resultCode == RESULT_OK) {
                     Alumno alumnoTmp = Datos.getInstance().getmAlumnos().get(posAlumno);
                     Bundle extras = data.getExtras();
                     Bitmap imageBitmap = (Bitmap) extras.get("data");
                     alumnoTmp.setFoto(imageBitmap);
                     posAlumno = -1;
                 }
-
                 mostrarFragmentoListadoAlumnos();
                 break;
         }
