@@ -39,12 +39,13 @@
 
     <TextView
         android:id="@+id/tvDniRes"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="4dp"
         android:text="TextView"
         android:textStyle="bold"
         app:layout_constraintBaseline_toBaselineOf="@+id/tvDniLabel"
+        app:layout_constraintEnd_toStartOf="@+id/tvNombreLabel"
         app:layout_constraintStart_toEndOf="@+id/tvDniLabel" />
 
     <TextView
@@ -80,11 +81,13 @@
 
     <TextView
         android:id="@+id/tvFechaNacRes"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="4dp"
+        android:layout_marginEnd="24dp"
         android:text="TextView"
         app:layout_constraintBaseline_toBaselineOf="@+id/tvFechaNacLabel"
+        app:layout_constraintEnd_toStartOf="@+id/tvCicloLabel"
         app:layout_constraintStart_toEndOf="@+id/tvFechaNacLabel" />
 
     <TextView

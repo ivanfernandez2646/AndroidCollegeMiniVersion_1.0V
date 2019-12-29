@@ -74,6 +74,13 @@ public class MainActivity extends AppCompatActivity implements ConfirmDialog.Exi
 
         NavigationView navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(onNavigationItemSelectedListener);
+
+        for (int i = 0; i < 20; i++) {
+            Alumno a = new Alumno();
+            a.setDni(String.valueOf(i));
+            Datos.getInstance().getmAlumnos().add(a);
+        }
+
         mostrarFragmentoListadoAlumnos();
     }
 
